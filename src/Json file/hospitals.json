@@ -1,0 +1,29 @@
+{
+    "hospitals": [
+      {
+        "name": "City Hospital",
+        "state": "New York",
+        "city": "New York",
+        "specialist": "Cardiologist",
+        "businessType": "Healthcare",
+        "forBusiness": "For Business"
+      },
+      {
+        "name": "Central Medical Center",
+        "state": "California",
+        "city": "Los Angeles",
+        "specialist": "Dermatologist",
+        "businessType": "Healthcare",
+        "forBusiness": "For Home"
+      },
+      {
+        "name": "Westside Clinic",
+        "state": "Texas",
+        "city": "Austin",
+        "specialist": "Neurologist",
+        "businessType": "Healthcare",
+        "forBusiness": "For Business"
+      }
+    ]
+  }
+  

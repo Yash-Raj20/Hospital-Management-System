@@ -1,0 +1,51 @@
+/* Form container styling */
+.form-container {
+  background-color: #f5f5f0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title styling */
+.form-title {
+  color: #1f2278;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Dropdown select styling */
+.form-select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Button styling */
+.form-button {
+  background-color: #f17732;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover effect on button */
+.form-button:hover {
+  background-color: #f17832eb;
+}
