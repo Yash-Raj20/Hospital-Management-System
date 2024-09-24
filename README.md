@@ -25,11 +25,12 @@ Start the server
 ```
 
 # Hospital-Management-System-User-Side
+
 This website is made for the user interaction only , where the user or patients can book appointments , can get their reports online , know the details about the hospital, Doctors and many more information...
 
 ## Tech Stack
 
-**Client:** 
+**Client:**
 
 - **React**
 - **Redux Thunk**
@@ -46,28 +47,29 @@ This website is made for the user interaction only , where the user or patients 
 
 ## Deployment
 
-- **Client**  (Netlify)
-- **Server**  (Cyclic)
+<!-- - **Client** (Netlify)
+- **Server** (Cyclic) -->
 
 ## Credentials
 
+<!--
 ID - 100
 
-Password - masai
+Password - masai -->
 
 ## Features
 
 - Creating appointments
-- Getting reports 
+- Getting reports
 - Doctor Information
 
 ## 🔗 Links
 
-Client - https://hms-user-side.netlify.app/
+<!-- Client - https://hms-user-side.netlify.app/
 
 Staff Dashboard - https://hm-system.netlify.app/
 
-Server - https://github.com/piyush-agrawal6/HMS-Backend
+Server - https://github.com/piyush-agrawal6/HMS-Backend -->
 
 ## Screenshots
 
@@ -75,11 +77,9 @@ Server - https://github.com/piyush-agrawal6/HMS-Backend
 
 ![31 01 2023_21 51 14_REC](https://user-images.githubusercontent.com/100460788/215819644-9abea62e-87aa-4fc9-9dbb-2dec52ea1c65.png)
 
-
 2.Doctors
 
 ![31 01 2023_21 51 42_REC](https://user-images.githubusercontent.com/100460788/215819655-f6bba72e-2fb0-4487-af0c-cc692c86cfa1.png)
-
 
 3.Book Appointments
 
@@ -97,15 +97,10 @@ Server - https://github.com/piyush-agrawal6/HMS-Backend
 
 ![31 01 2023_21 52 22_REC](https://user-images.githubusercontent.com/100460788/215819668-9e12eb1b-412f-4f27-b4ee-0eb807a19d2a.png)
 
-
-
 ## Presentation
 
-Link - <a href="https://drive.google.com/file/d/1xwcSsjdl6QHnJ-JXl11moBAwSqSQFRjh/view?usp=sharing" alt="presentation">Drive</a>
+<!-- Link - <a href="https://drive.google.com/file/d/1xwcSsjdl6QHnJ-JXl11moBAwSqSQFRjh/view?usp=sharing" alt="presentation">Drive</a> -->
 
 ## Team Members / Contributors
 
-- [@Piyush Agrawal](https://github.com/piyush-agrawal6)
-- [@Rajendra Patel](https://github.com/centauricoder01)
-- [@Salman Ajani](https://github.com/SalmanAjani)
-
+- [@Piyush Agrawal](https://github.com/Yash-Raj20)
