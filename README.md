@@ -103,4 +103,4 @@ Server - https://github.com/piyush-agrawal6/HMS-Backend -->
 
 ## Team Members / Contributors
 
-- [@Piyush Agrawal](https://github.com/Yash-Raj20)
+- [@Ratnesh Kumar](https://github.com/Yash-Raj20)
