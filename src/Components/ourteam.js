@@ -26,7 +26,7 @@ function OurTeam() {
                   <li className="breadcrumb-item">
                     <Link to={"/home"}>
                       <FiHome />
-                      Home
+                      Home 
                     </Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
