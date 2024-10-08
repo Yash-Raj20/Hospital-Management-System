@@ -1,8 +1,8 @@
 import "../index.css";
-import { BsGithub, BsLinkedin, BsLink45Deg } from "react-icons/bs";
-import salman from "../Assets/salman.jpg";
-import rajendra from "../Assets/rajendra.jpg";
-import piyush from "../Assets/piyush.png";
+// import { BsGithub, BsLinkedin, BsLink45Deg } from "react-icons/bs";
+// import salman from "../Assets/salman.jpg";
+// import rajendra from "../Assets/rajendra.jpg";
+// import piyush from "../Assets/piyush.png";
 import NavBars from "./navbar";
 import Footer from "./footer";
 
@@ -10,7 +10,7 @@ function Team() {
   return (
     <div>
       <NavBars />
-      <section className="section-area section-sp3 team-wraper">
+      {/* <section className="section-area section-sp3 team-wraper">
         <div className="container">
           <div className="heading-bx text-center">
             <h6 className="title-ext text-secondary">Our Team</h6>
@@ -130,7 +130,7 @@ function Team() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <Footer />
     </div>
   );

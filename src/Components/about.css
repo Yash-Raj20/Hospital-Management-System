@@ -12,28 +12,16 @@
 
 /* Banner About Section */
 
-.page-banner {
-  background: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../Assets/img1.815eb17a.jpg);
-  position: relative;
-  overflow: hidden;
-  height: 420px;
-  width: 100%;
-  z-index: 1;
-}
-
 .page-banner .page-banner-entry {
-  height: 420px;
-  padding-top: 6em;
-  padding-bottom: 60px;
+  height: 170px;
+  padding-top: 2em;
+  padding-bottom: 10px;
 }
 
 .page-banner h1 {
-  font-size: 62px;
+  font-size: 50px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #1f2278;
   text-transform: capitalize;
 }
@@ -42,7 +30,7 @@
   box-shadow: 0 5px 30px 0 rgb(86 90 207 / 30%);
   font-family: "Montserrat", sans-serif;
   background-color: #565acf !important;
-  padding: 12px 30px;
+  padding: 10px 50px;
   border-radius: 10px;
   display: inline-block;
 }

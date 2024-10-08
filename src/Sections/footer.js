@@ -55,7 +55,6 @@ function Footer() {
                         <span>Booking</span>
                       </Link>
                     </li>
-                   
                   </ul>
                 </div>
               </div>
@@ -64,27 +63,27 @@ function Footer() {
                   <h3 className="footer-title">Our Services</h3>
                   <ul>
                     <li>
-                      <Link to="">
+                      <Link to="#">
                         <span>Dental Care</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="">
+                      <Link to="#">
                         <span>ENT Clinic</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="">
+                      <Link to="#">
                         <span>Cardiology</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="">
+                      <Link to="#">
                         <span>Precise Diagnosis</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="">
+                      <Link to="#">
                         <span>Ambulance Services</span>
                       </Link>
                     </li>
@@ -98,22 +97,22 @@ function Footer() {
                   <div className="footer-social-link">
                     <ul>
                       <li>
-                        <Link to="">
+                        <Link to="#">
                           <FaFacebookF />
                         </Link>
                       </li>
                       <li>
-                        <Link to="">
+                        <Link to="#">
                           <FaTwitter />
                         </Link>
                       </li>
                       <li>
-                        <Link to="">
+                        <Link to="#">
                           <FaInstagram />
                         </Link>
                       </li>
                       <li>
-                        <Link to="">
+                        <Link to="#">
                           <FaLinkedin />
                         </Link>
                       </li>
@@ -130,13 +129,6 @@ function Footer() {
               <div className="col-12 text-center">
                 <p className="copyright-text">
                   Copyright © 2023 Redesign & Redeveloped by
-                  <a
-                    href="https://github.com/piyush-agrawal6"
-                    className="text-secondary"
-                    target="_blank"
-                  >
-                    Piyush Agrawal
-                  </a>
                 </p>
               </div>
             </div>

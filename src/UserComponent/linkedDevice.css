@@ -1,0 +1,15 @@
+.linked-devices {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.linked-devices ul {
+  list-style: none;
+  padding: 0;
+}
+
+.linked-devices li {
+  margin: 10px 0;
+}

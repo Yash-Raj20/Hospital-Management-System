@@ -1,120 +1,102 @@
-import "./login.css";
-import "../index.css";
-import logo from "../Assets/Logo.png";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 import NavBars from "../Sections/navbar";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { authLogin, forgotPassword } from "../Redux/auth/action";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-const notify = (text) => toast(text);
+import Footer from "../Sections/footer";
+import "./login.css";
 
 function Login() {
-  const [form, setForm] = useState({ patientID: "", password: "" });
-  const [email, setemail] = useState("");
-  const dispatch = useDispatch();
-  const onChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const navigate = useNavigate();
-  const handleClick = (e) => {
-    try {
-      dispatch(authLogin(form)).then((res) => {
-        if (res.message === "Login Successful.") {
-          notify("Login Successful.");
-          return navigate("/");
+
+  const onSubmit = (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    async function login() {
+      try {
+        const res = await axios.post(
+          "http://localhost:4001/users/login",
+          userInfo
+        );
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Login Successful");
+          localStorage.setItem("Users", JSON.stringify(res.data.user));
+
+          setTimeout(() => {
+            navigate("/");
+            window.location.reload();
+          }, 1000);
         }
-        if (res.message === "Wrong credentials, Please try again.") {
-          return notify("Wrong credentials, Please try again.");
+      } catch (err) {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error: " + err.response.data.message);
+        } else {
+          console.log(err);
+          toast.error("Error: Unknown error occurred");
         }
-        if (res.message === "Error occurred, unable to Login.") {
-        }
-      });
-    } catch (error) {
-      console.log(error);
-      return notify("Error occurred, unable to Login.");
-    }
-  };
-  const [forgotLoading, setforgetLoading] = useState(false);
-  const HandlePassword = () => {
-    let data = { email, type: "patient" };
-    setforgetLoading(true);
-    dispatch(forgotPassword(data)).then((res) => {
-      if (res.message === "User not found") {
-        setforgetLoading(false);
-        return notify("User Not Found");
       }
-      setemail("");
-      setforgetLoading(false);
-      return notify("Account Details Send");
-    });
+    }
+    login();
   };
 
   return (
     <>
-      <ToastContainer />
       <NavBars />
-      <div className="section-area account-wraper2">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-5 col-lg-6 col-md-8">
-              <div className="appointment-form form-wraper">
-                <div className="logo">
-                  <img src={logo} alt="img" />
-                </div>
-                <form action="#">
-                  <div className="form-group">
-                    <h6>Patient ID</h6>
-                    <input
-                      name="patientID"
-                      value={form.patientID}
-                      type="text"
-                      className="form-control"
-                      placeholder="ID"
-                      onChange={onChange}
-                    ></input>
-                  </div>
-                  <div className="form-group">
-                    <h6>Password</h6>
-                    <input
-                      name="password"
-                      value={form.password}
-                      type="password"
-                      className="form-control"
-                      placeholder="Password"
-                      onChange={onChange}
-                    ></input>
-                  </div>
-                  <div className="form-group" onClick={handleClick}>
-                    <Link
-                      type="botton"
-                      className="btn mb-30 btn-lg btn-primary w-100"
-                    >
-                      Login
-                    </Link>
-                    <p>Forgot Account Details?</p>
-                  </div>
-                </form>
-                <div className="forgotPass">
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={({ target }) => setemail(target.value)}
-                    placeholder="Enter email"
-                  />
-                  <br />
-                  <button onClick={HandlePassword}>
-                    {forgotLoading ? "Loading.." : "Send Mail"}
-                  </button>
-                </div>
-              </div>
+      <div className="login-container">
+        <div className="login-box">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <h3 className="login-title">Login</h3>
+            <div className="input-group">
+              {/* Email */}
+              <span>Email</span>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="input-field"
+                {...register("email", { required: true })}
+              />
+              {errors.email && (
+                <span className="error-text">This field is required</span>
+              )}
+
+              {/* Password */}
+              <span>Password</span>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                className="input-field"
+                {...register("password", { required: true })}
+              />
+              {errors.password && (
+                <span className="error-text">This field is required</span>
+              )}
             </div>
-          </div>
+
+            <div className="actions">
+              <button type="submit" className="login-btn">
+                Login
+              </button>
+              <p>
+                Not registered?{" "}
+                <Link to="/signup" className="register-link">
+                  Register
+                </Link>
+              </p>
+            </div>
+          </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

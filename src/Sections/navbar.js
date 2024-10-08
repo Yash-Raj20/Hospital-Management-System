@@ -3,20 +3,17 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Logo from "../Assets/Logo.png";
+import Logout from "../Components/Logout";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/authProvider.js";
 import "./navbar.css";
-import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-const notify = (text) => toast(text);
 
 function NavBars() {
-  const { data } = useSelector((store) => store.auth);
-  const dispatch = useDispatch();
+  const [authUser] = useAuth();
+
   return (
     <div className="navStick">
-      <ToastContainer />
       <Navbar expand="lg">
         <Container fluid>
           <Link to={"/"} className="navbar-brand">
@@ -36,30 +33,23 @@ function NavBars() {
                   Services
                 </Link>
               </NavDropdown>
-              <Link to={"/booking"} className="nav-link">
-                Booking
-              </Link>
-              {data?.isAuthenticated ? (
-                <Link
-                  to=""
-                  className="nav-link"
-                  onClick={() => {
-                    dispatch({ type: "AUTH_LOGOUT" });
-                    notify("Logged out");
-                  }}
-                >
-                  Logout
-                </Link>
-              ) : (
-                <NavDropdown title="Login" id="basic-nav-dropdown">
-                  <Link to={"/login"} className="dropdown-item">
-                    Patient
+
+              <NavDropdown title="User" id="basic-nav-dropdown">
+                {authUser ? (
+                  <Logout />
+                ) : (
+                  <Link to={"/login"} className="nav-link">
+                    Login
                   </Link>
-                  <a href="https://hm-system.netlify.app/" className="dropdown-item">
-                    Staff
-                  </a>
-                </NavDropdown>
-              )}
+                )}
+                <Link to={"/user/dashboard"} className="nav-link">
+                  User Dashboard
+                </Link>
+                <Link to={"/user/dashboard"} className="nav-link">
+                  Admin Dashboard
+                </Link>
+              </NavDropdown>
+
               <Link to="/Report" className="nav-link">
                 <button type="button">
                   Report

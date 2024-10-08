@@ -49,3 +49,11 @@ form {
 .form-button:hover {
   background-color: #f17832eb;
 }
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
