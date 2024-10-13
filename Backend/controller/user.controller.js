@@ -7,7 +7,7 @@ const cookieOptions = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production",
   sameSite: "Strict",
-  maxAge: 24 * 60 * 60 * 1000,
+  maxAge: 24 * 60 * 60 * 1000, // 1 day
 };
 
 // Signup function
@@ -31,6 +31,9 @@ export const signup = async (req, res) => {
 
     // Generate JWT token
     const token = generateToken(newUser._id);
+    if (!token) {
+      throw new Error("Token generation failed");
+    }
 
     // Set token in cookies
     res.cookie("token", token, cookieOptions);
@@ -45,7 +48,7 @@ export const signup = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("Error:", error.message);
+    console.error("Signup error:", error); // Log the full error
     res.status(500).json({ message: "Internal server error" });
   }
 };
@@ -69,6 +72,9 @@ export const login = async (req, res) => {
 
     // Generate JWT token
     const token = generateToken(user._id);
+    if (!token) {
+      throw new Error("Token generation failed");
+    }
 
     // Set token in cookies
     res.cookie("token", token, cookieOptions);
@@ -83,7 +89,7 @@ export const login = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("Error:", error.message);
+    console.error("Login error:", error); // Log the full error
     res.status(500).json({ message: "Internal server error" });
   }
 };

@@ -4,7 +4,7 @@ import About from "./Components/about";
 // import OurTeam from "./Components/ourteam";
 // import Booking from "./Components/booking";
 import NotFound from "./Components/notfound";
-import Login from "./Components/Login.js";
+import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Service from "./Components/service";
 import Report from "./Components/Report";

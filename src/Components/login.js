@@ -20,32 +20,46 @@ function Login() {
       email: data.email,
       password: data.password,
     };
+
     async function login() {
       try {
+        // Axios request to login endpoint
         const res = await axios.post(
           "http://localhost:4001/users/login",
           userInfo
         );
-        console.log(res.data);
-        if (res.data) {
+
+        // Log response for debugging
+        console.log("Login response data:", res.data);
+
+        if (res.data && res.data.user) {
           toast.success("Login Successful");
+
+          // Save user to localStorage
           localStorage.setItem("Users", JSON.stringify(res.data.user));
 
+          // Redirect user after successful login
           setTimeout(() => {
             navigate("/");
             window.location.reload();
           }, 1000);
+        } else {
+          toast.error("Login failed. Please try again.");
         }
       } catch (err) {
+        // Check if we received an error response from the server
         if (err.response) {
-          console.log(err);
+          console.log("Server error response:", err.response);
           toast.error("Error: " + err.response.data.message);
         } else {
-          console.log(err);
+          // For other types of errors (network issues, etc.)
+          console.log("Unknown error:", err);
           toast.error("Error: Unknown error occurred");
         }
       }
     }
+
+    // Call the login function
     login();
   };
 
@@ -63,10 +77,10 @@ function Login() {
                 type="email"
                 placeholder="Enter your email"
                 className="input-field"
-                {...register("email", { required: true })}
+                {...register("email", { required: "Email is required" })}
               />
               {errors.email && (
-                <span className="error-text">This field is required</span>
+                <span className="error-text">{errors.email.message}</span>
               )}
 
               {/* Password */}
@@ -75,10 +89,10 @@ function Login() {
                 type="password"
                 placeholder="Enter your password"
                 className="input-field"
-                {...register("password", { required: true })}
+                {...register("password", { required: "Password is required" })}
               />
               {errors.password && (
-                <span className="error-text">This field is required</span>
+                <span className="error-text">{errors.password.message}</span>
               )}
             </div>
 
