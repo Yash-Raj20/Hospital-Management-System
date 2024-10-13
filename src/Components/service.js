@@ -7,7 +7,6 @@ import {
 import { TbMedicineSyrup } from "react-icons/tb";
 import "./about.css";
 import "../index.css";
-import NavBars from "../Sections/navbar";
 import { FiHome } from "react-icons/fi";
 import { RiSurgicalMaskFill } from "react-icons/ri";
 import Footer from "../Sections/footer";
@@ -17,7 +16,7 @@ import { Link } from "react-router-dom";
 function Service() {
   return (
     <div>
-      <NavBars />
+     
       <div className="banner-wraper">
         <div className="page-banner">
           <div className="container">

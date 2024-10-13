@@ -1,21 +1,22 @@
 /* Banner Section */
 
 .banner {
-  margin-top: 0px;
+  margin-top: 0;
   position: relative !important;
   background-image: url(../Assets/bg1.c53c8971.jpg);
   background-repeat: no-repeat;
-  height: 700px;
-  background-position: 50%;
+  height: 600px;
+  background-position: center; /* Use 'center' for better compatibility */
   background-size: cover;
   overflow: hidden;
   z-index: 1;
+  background-color: #faf9f6;
 }
 
 .banner .row h5 {
   margin: 0 0 10px;
   font-size: 18px;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   display: inline-block;
   color: #565acf;
   padding: 5px 15px;
@@ -52,13 +53,20 @@
 .banner .row a:hover {
   background-color: #ff853f;
 }
+
+.bannerImg {
+  display: flex; /* Use flex to center images */
+  justify-content: center;
+  padding: 60px 0;
+}
+
 .bannerImg img {
-  width: 90%;
+  max-width: 100%; /* Ensure image does not exceed the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .banner .row img {
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
   border-style: none;
   height: auto;
   max-width: 100%;
@@ -69,7 +77,7 @@
 
 @keyframes up-down {
   0% {
-    top: 0px;
+    top: 0;
   }
   100% {
     top: 12px;
@@ -83,67 +91,72 @@
   left: 0;
   bottom: 0;
   position: absolute;
-  background-image: url(../Assets/shape1.1112f1ac.png);
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100%;
   z-index: -1;
 }
 
+/* Media Queries */
 @media (max-width: 992px) {
   .banner {
     padding-top: 20px;
     height: 400px;
   }
+
   .banner .row h2 {
     font-size: 30px;
   }
 
   .banner .row h5 {
-    padding: 10px 0px;
+    padding: 10px 0;
   }
+
   .banner .row a {
     padding: 15px 30px;
     font-size: 14px;
   }
 }
+
 @media (max-width: 768px) {
   .banner {
-    padding-top: 20px;
-    height: 600px;
+    height: 600px; /* Maintain height */
   }
-  .bannerImg {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
+
   .bannerImg img {
-    width: 50%;
+    width: 70%; /* Adjust image width for smaller screens */
   }
 }
+
 @media (max-width: 450px) {
   .banner .row h5 {
     font-size: 15px;
   }
+
   .banner .row h2 {
     font-size: 25px;
   }
+
   .banner .row a {
     padding: 10px 20px;
     font-size: 12px;
   }
+
   .bannerImg {
     padding-top: 25px;
   }
+
   .bannerImg img {
-    width: 60%;
+    width: 80%; /* Increase image size for very small screens */
   }
 }
+
 @media (max-width: 350px) {
   .banner {
     padding-top: 20px;
     height: 500px;
   }
+
   .banner .row h2 {
     font-size: 22px;
   }

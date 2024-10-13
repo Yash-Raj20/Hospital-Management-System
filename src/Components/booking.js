@@ -1,6 +1,5 @@
 import "./about.css";
 import { FiHome } from "react-icons/fi";
-import NavBars from "../Sections/navbar";
 import Account from "../Sections/account";
 import Footer from "../Sections/footer";
 import ToTop from "../Sections/totop";
@@ -9,7 +8,6 @@ import { Link } from "react-router-dom";
 function Booking() {
   return (
     <div>
-      <NavBars />
       <div className="banner-wraper">
         <div className="page-banner">
           <div className="container">

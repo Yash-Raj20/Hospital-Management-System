@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import doctor from "../Assets/doctor.webp";
+import doctor from "../Assets/doctor-b.png";
 import "./banner.css";
 function Banner() {
   return (

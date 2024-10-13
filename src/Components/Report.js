@@ -1,14 +1,13 @@
 import "./Report.css";
 import "./about.css";
 import "../index.css";
-import NavBars from "../Sections/navbar";
 import { FiHome } from "react-icons/fi";
 import Footer from "../Sections/footer";
 import ToTop from "../Sections/totop";
-import { Link, Navigate } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const notify = (text) => toast(text);
 
@@ -19,7 +18,6 @@ function Service() {
   }
   return (
     <div>
-      <NavBars />
       <div className="banner-wraper">
         <div className="page-banner">
           <div className="container">

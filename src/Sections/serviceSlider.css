@@ -1,0 +1,94 @@
+.updates-section {
+    padding: 50px 0; /* Top and bottom padding */
+    background-color: #f5f5fc; /* Light background color */
+    position: relative; /* For z-index usage */
+    z-index: 1; /* Set a base z-index */
+    background-image: url(/src/Assets/bdetails1.d8c3c8e3.jpg); /* Background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Fix the background when scrolling */
+  }
+  
+  .container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Horizontal padding */
+  }
+  
+  .heading {
+    font-size: 2.5rem; /* Font size for the heading */
+    color: #343a40; /* Dark text color */
+    z-index: 10; /* Higher z-index for the heading */
+    position: relative;
+    font-weight: 700;
+  }
+  
+  .updates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+    gap: 0; /* Remove gap between grid items */
+    position: relative;
+    z-index: 5; /* Z-index for the grid */
+  }
+  
+  .updates-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Transition effect for hover */
+    position: relative; /* For z-index layering */
+    z-index: 6; /* Higher z-index for cards */
+  }
+  
+  .updates-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    z-index: 7; /* Elevate the z-index on hover to bring the card forward */
+  }
+  
+  .card-heading {
+    font-size: 1.5rem; /* Font size for card headings */
+    font-weight: 600; /* Bold font */
+    color: #007bff; /* Primary color for headings */
+  }
+  
+  .para-wrap p {
+    color: #6c757d; /* Gray text color */
+  }
+  
+  .anchor-button {
+    display: inline-block; /* Inline block for the button */
+    padding: 10px 20px; /* Padding for button */
+    color: #ffffff; /* White text color */
+    background-color: #007bff; /* Primary color for button */
+    border-radius: 4px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Transition effect for background */
+    position: relative; /* For z-index usage */
+    z-index: 8; /* Highest z-index for the button */
+  }
+  
+  .anchor-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .icon img {
+    width: 100%; /* Full width for images */
+    max-width: 100px; /* Max width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .updates-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2-column layout for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .updates-grid {
+      grid-template-columns: 1fr; /* 1-column layout for mobile */
+    }
+  }
+  

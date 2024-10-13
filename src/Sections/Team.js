@@ -3,13 +3,12 @@ import { BsGithub, BsLinkedin, BsLink45Deg } from "react-icons/bs";
 import salman from "../Assets/salman.jpg";
 import rajendra from "../Assets/rajendra.jpg";
 import piyush from "../Assets/piyush.png";
-import NavBars from "./navbar";
 import Footer from "./footer";
+import { Link } from "react-router-dom";
 
 function Team() {
   return (
     <div>
-      <NavBars />
       <section className="section-area section-sp3 team-wraper">
         <div className="container">
           <div className="heading-bx text-center">
@@ -29,28 +28,13 @@ function Team() {
                   </div>
                   <ul className="social-media">
                     <li>
-                      <a
-                        href="https://github.com/centauricoder01"
-                        target="_blank"
-                      >
-                        <BsGithub />
-                      </a>
+                      <Link/>
                     </li>
                     <li>
-                      <a
-                        href="https://www.linkedin.com/in/rajendra01/"
-                        target="_blank"
-                      >
-                        <BsLinkedin />
-                      </a>
+                      <Link/>
                     </li>
                     <li>
-                      <a
-                        href="https://centauricoder01.github.io/"
-                        target="_blank"
-                      >
-                        <BsLink45Deg />
-                      </a>
+                    <Link/>
                     </li>
                   </ul>
                 </div>
@@ -68,28 +52,13 @@ function Team() {
                   </div>
                   <ul className="social-media">
                     <li>
-                      <a
-                        href="https://github.com/piyush-agrawal6"
-                        target="_blank"
-                      >
-                        <BsGithub />
-                      </a>
+                    <Link/>
                     </li>
                     <li>
-                      <a
-                        href="https://www.linkedin.com/in/piyush-agrawal-me/"
-                        target="_blank"
-                      >
-                        <BsLinkedin />
-                      </a>
+                    <Link/>
                     </li>
                     <li>
-                      <a
-                        href="https://piyush-agrawal6.github.io/"
-                        target="_blank"
-                      >
-                        <BsLink45Deg />
-                      </a>
+                    <Link/>
                     </li>
                   </ul>
                 </div>
@@ -107,22 +76,13 @@ function Team() {
                   </div>
                   <ul className="social-media">
                     <li>
-                      <a href="https://github.com/SalmanAjani" target="_blank">
-                        <BsGithub />
-                      </a>
+                    <Link/>
                     </li>
                     <li>
-                      <a
-                        href="https://www.linkedin.com/in/salmanajani26/"
-                        target="_blank"
-                      >
-                        <BsLinkedin />
-                      </a>
+                    <Link/>
                     </li>
                     <li>
-                      <a href="https://salmanajani.github.io/" target="_blank">
-                        <BsLink45Deg />
-                      </a>
+                    <Link/>
                     </li>
                   </ul>
                 </div>

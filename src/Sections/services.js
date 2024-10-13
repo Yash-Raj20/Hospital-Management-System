@@ -40,7 +40,7 @@ const settings = {
 function Services() {
   return (
     <div>
-      <section className="section-area section-sp1 service-wraper">
+      <section className="section-area section-sp1  service-wraper">
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-7 mb-30 bhover">

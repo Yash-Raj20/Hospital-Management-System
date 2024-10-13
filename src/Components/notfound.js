@@ -1,4 +1,3 @@
-import NavBars from "../Sections/navbar";
 import Footer from "../Sections/footer";
 import "./about.css";
 import { FiHome } from "react-icons/fi";
@@ -10,7 +9,6 @@ import { Link } from "react-router-dom";
 function NotFound() {
   return (
     <div>
-      <NavBars />
       <div className="banner-wraper">
         <div className="page-banner">
           <div className="container">

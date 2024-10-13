@@ -1,8 +1,11 @@
 nav {
   width: 100%;
-  background-color: #f7f7ff !important;
+  background-color: #ded9d9 !important;
   transition: all 0.5s;
   z-index: 997;
+  position: sticky;
+  justify-content: space-between;
+  top: 0;
 }
 
 nav .navbar-nav {
@@ -15,7 +18,7 @@ nav .navbar-nav {
 }
 
 nav .navbar-nav a {
-  color: #1f2278;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -24,11 +27,11 @@ nav .navbar-nav a {
 }
 
 .navbar-nav a.active {
-  color: #f17732 !important;
+  color: #ffffff !important;
 }
 
 nav .navbar-nav a:hover {
-  color: #f17732;
+  color: #e132f1;
 }
 
 .sticked {
@@ -59,7 +62,7 @@ nav .navbar-nav button {
   transition: all 0.5s;
   border-width: 2px;
   line-height: 1.2;
-  box-shadow: 0 5px 20px 0 rgba(86, 90, 207, 0.3) !important;
+  box-shadow: 0 5px 20px 0 rgba(240, 240, 240, 0.3) !important;
 }
 
 nav .navbar-nav button span {
@@ -95,16 +98,22 @@ nav .navbar-nav button:hover {
 }
 
 .navbar-nav .dropdown-menu a {
-  color: #444;
+  color: #444444;
   font-size: 14px;
   line-height: 30px !important;
-  transition: 0.3s ease all;
+  /* transition: 0.3s ease all; */
   position: relative;
 }
 
 .navbar-toggler {
   border: none !important;
 }
+
+.custom-toggle {
+  border: none; /* Remove default border */
+  background: transparent; /* Make background transparent */
+}
+
 
 .navbar-nav .dropdown-menu a:hover {
   color: #565acf !important;

@@ -10,10 +10,13 @@ import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
+import NavBars from "./Sections/navbar.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Provider store={store}>
+   <NavBars />
+
       <App />
     </Provider>
   </BrowserRouter>

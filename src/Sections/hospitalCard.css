@@ -1,0 +1,114 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+ 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-location {
+  font-size: 1rem;
+  
+}
+
+.card-rating {
+  font-size: 1rem;
+  color: gold;
+}
+.likes-views {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.card-likes {
+  color: #878787;
+ 
+}
+.card-likes svg{
+  margin-right: 5px;
+}
+.like-icons {
+  color: #e70e0e;
+}
+.card-views{
+  color: #878787;
+}
+.card-views svg {
+  margin-right: 5px;
+}
+
+
+.view-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3;
+}
+
+
+

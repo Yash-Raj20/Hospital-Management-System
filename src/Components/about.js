@@ -1,5 +1,4 @@
 import AboutUs from "../Sections/aboutus";
-import NavBars from "../Sections/navbar";
 import Footer from "../Sections/footer";
 import ToTop from "../Sections/totop";
 import "./about.css";
@@ -10,7 +9,6 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div>
-      <NavBars />
       <div className="banner-wraper">
         <div className="page-banner">
           <div className="container">

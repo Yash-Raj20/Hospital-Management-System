@@ -1,0 +1,67 @@
+/* Container styles */
+.meet-doc-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Heading styles */
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .para-wrap {
+    margin: 20px 0;
+  }
+  
+  .fullcontent {
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto;
+  }
+  
+  /* Paragraph styles */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+  
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+  
+  .mb-50 {
+    margin-bottom: 50px;
+  }
+  
+  /* Image block styles */
+  .image-block {
+    width: 100%;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .image-block img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Optional: Adding some responsive styles */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem; /* Smaller heading on mobile */
+    }
+    
+    .para-wrap p {
+      font-size: 0.9rem; /* Slightly smaller text */
+    }
+  }
+  

@@ -1,0 +1,103 @@
+.why-medanta {
+    padding: 75px 0; /* Adjusts top and bottom padding */
+  }
+  
+  .why-wrapper {
+    max-width: 1300px; /* Set max width for the wrapper */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 15px; /* Add padding on sides */
+  }
+  
+  .text-center {
+    text-align: center; /* Center text */
+  }
+  
+  .heading {
+    font-size: 2.5em; /* Adjust font size */
+  }
+  
+  .why-details {
+    display: flex; /* Use flexbox for the overall layout */
+    flex-wrap: nowrap; /* Prevent wrapping to the next row */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align items to the start vertically */
+    margin: 40px 20px; /* Margin around the details */
+    gap: 10px; /* Space between items */
+}
+
+.left-1-container,
+.right-1-container,
+.left-2-container,
+.right-2-container {
+    display: flex; /* Make these containers flex containers */
+    flex-direction: column; /* Stack children vertically */
+    flex: 0 0 200px; /* Fixed width or flex-basis */
+    border-radius: 30px;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Ensure the containers fit within the main wrapper */
+.why-wrapper {
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+  
+  .why-list {
+    display: flex; /* Keep this as flexbox */
+    justify-content: center; /* Center images horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 10px; /* Space between items */
+    max-width: 800px; /* Optional: Set a max width for the list */
+    margin: 0 20px; /* Margin around the list */
+  }
+  
+  .why-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow of image */
+  }
+  
+  .left-1-container img,
+  .right-1-container img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .center-image {
+    max-width: 100%;
+    height: auto; /* Ensures responsive images */
+    border-radius: 30px;
+  }
+  
+  .why-block:hover {
+    transform: scale(1.05); /* Optional: scale effect on hover */
+  }
+  
+  .left-1-container:hover,
+  .right-1-container:hover,
+  .left-2-container:hover,
+  .right-2-container:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .why-details {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .why-details {
+      flex-direction: column; /* Stack items vertically */
+    }
+  
+    .left-1-container,
+    .right-1-container,
+    .left-2-container,
+    .right-2-container {
+      min-width: 100%; /* Full width on mobile */
+    }
+  }
+  

@@ -15,7 +15,6 @@ import { Link } from "react-router-dom";
 function OurTeam() {
   return (
     <div>
-      <NavBars />
       <div className="banner-wraper">
         <div className="page-banner">
           <div className="container">
